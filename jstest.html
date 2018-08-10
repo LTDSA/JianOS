@@ -2,7 +2,29 @@
   <title>Flyme</title>
   <script language="JavaScript" type="text/javaScript">
   <!--
-  window.alert("1.0.0(20180806)\n更新日志：\n - 首个版本\nBug：\n - 无法打开浏览器");
+  function openWin()
+{ //删除table某行的操作
+	if(window.confirm("确定要删除第" + (trObj.rowIndex + 1) + "行[" + tdTxt + "]的数据吗？"))
+	{ //用户确认
+		var _url = "9.7.html"; //指定URL
+  	var _name = "_blank"; //指定打开窗口的名称
+  	var _feature = ""; //打开窗口的效果
+  	var _left = (window.screen.width - 400) / 2; //计算新窗口居中时距屏幕左边的距离
+	  var _top = (window.screen.Height - 300) / 2; //计算新窗口居中时距屏幕上方的距离
+  	_feature += "left=" + _left + ","; //新窗口距离屏幕上方的距离
+  	_feature += "top=" + _top + ","; //新窗口距离屏幕左边的距离
+  	_feature += "width=400,"; //新窗口的宽度
+  	_feature += "height=300,"; //新窗口的高度
+  	_feature += "resizable=0,"; //大小不可更改
+  	_feature += "scrollbars=1,"; //滚动条显示
+  	_feature += "menubar=0,toolbar=0,status=0,location=0,directories=0"; //其他显示效果
+  	var win = window.open(_url, _name, _feature);
+
+		//其他操作，比如：提交表单等
+	}
+}
+//-->
+
   </script>
   <body>
   </body>
